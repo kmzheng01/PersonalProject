@@ -1,0 +1,9 @@
+"""
+MANIFEST.in - Include additional files in distribution
+"""
+
+include README.md
+include LICENSE
+include requirements.txt
+recursive-include config/feature_scripts *.dsl
+recursive-include web/static *

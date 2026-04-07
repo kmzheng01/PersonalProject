@@ -1,0 +1,404 @@
+/* AudioStream Web Interface Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1db954;
+    --secondary-color: #191414;
+    --accent-color: #1ed760;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --bg-tertiary: #282828;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 20px;
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: var(--text-secondary);
+    font-size: 1.1em;
+}
+
+main {
+    display: grid;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+section {
+    background-color: var(--bg-secondary);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--bg-tertiary);
+}
+
+section h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+/* Now Playing */
+.now-playing {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.album-art {
+    flex-shrink: 0;
+}
+
+.album-art img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.track-info {
+    flex: 1;
+}
+
+.track-info h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.track-info p {
+    margin: 5px 0;
+    color: var(--text-secondary);
+    font-size: 1.1em;
+}
+
+.format-info {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 24px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.btn-control {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.btn-control:hover {
+    background-color: var(--text-secondary);
+    color: var(--secondary-color);
+}
+
+/* Playback Controls */
+.playback-controls {
+    background-color: var(--bg-secondary);
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 6px;
+    border-radius: 3px;
+    background-color: var(--bg-tertiary);
+    outline: none;
+    cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.progress-bar::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    border: none;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Volume and Settings */
+.volume-settings {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.control-group label {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.slider {
+    width: 150px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: var(--bg-tertiary);
+    outline: none;
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    border: none;
+}
+
+.control {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--text-secondary);
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* File Upload */
+.upload-area {
+    border: 2px dashed var(--primary-color);
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: rgba(29, 185, 84, 0.1);
+}
+
+.upload-area:hover {
+    background-color: rgba(29, 185, 84, 0.2);
+    border-color: var(--accent-color);
+}
+
+.upload-area p {
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+#fileInput {
+    display: none;
+}
+
+.upload-status {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.upload-item {
+    background-color: var(--bg-tertiary);
+    padding: 10px 15px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Library */
+.library-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    flex: 1;
+    padding: 10px 15px;
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--text-secondary);
+    border-radius: 4px;
+    color: var(--text-primary);
+}
+
+.library-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.track-item {
+    background-color: var(--bg-tertiary);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.track-item:hover {
+    background-color: rgba(29, 185, 84, 0.2);
+    border-left: 3px solid var(--primary-color);
+}
+
+/* Playlists */
+.playlist-container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Device Info */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.info-grid p {
+    background-color: var(--bg-tertiary);
+    padding: 15px;
+    border-radius: 4px;
+    color: var(--text-secondary);
+}
+
+.info-grid strong {
+    color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--bg-tertiary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .now-playing {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .album-art img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .volume-settings {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .button-group {
+        gap: 5px;
+    }
+
+    .btn {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-tertiary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}

@@ -1,0 +1,39 @@
+# Core audio processing
+sounddevice>=0.4.5
+soundfile>=0.12.1
+numpy>=1.21.0
+scipy>=1.7.0
+
+# Web framework
+Flask>=2.0.0
+Flask-CORS>=3.0.10
+Werkzeug>=2.0.0
+
+# Metadata reading
+mutagen>=1.45.0
+musicbrainzngs>=0.7.1
+
+# Configuration
+PyYAML>=5.4.0
+
+# Torrent support (optional)
+python-libtorrent>=2.0.7
+
+# Database
+# sqlite3 is included in Python standard library
+
+# Raspberry Pi support (optional)
+# RPi.GPIO>=0.7.0;python_version<'3.11'
+# gpiozero>=2.0.0
+
+# Display support (optional)
+# adafruit-circuitpython-ssd1306>=1.6.0
+# Adafruit-CharLCD>=1.1.1
+
+# Network utilities
+netifaces>=0.11.0
+
+# Development and testing
+pytest>=6.0.0
+black>=21.0
+pylint>=2.10.0

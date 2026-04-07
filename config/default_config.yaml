@@ -1,0 +1,61 @@
+# Default configuration for AudioStream
+
+app:
+  name: AudioStream
+  version: 1.0.0
+  debug: false
+
+audio:
+  sample_rate: 44100
+  channels: 2
+  format: PCM_16
+  auto_output_detect: true
+  default_output: 0
+
+web:
+  host: 0.0.0.0
+  port: 5000
+  debug: false
+  upload_dir: ./uploads
+  max_file_size: 5368709120  # 5GB
+
+hardware:
+  enable_rpi_gpio: true
+  enable_display: true
+  enable_esp: false
+  rpi:
+    debounce_ms: 50
+    long_press_ms: 1000
+  display:
+    type: lcd_16x2
+    i2c_address: 0x27
+  esp:
+    ip: 192.168.1.100
+    port: 5000
+
+library:
+  music_dir: ./music
+  auto_scan: true
+  scan_interval: 300  # seconds
+
+torrenting:
+  enabled: false
+  max_concurrent_downloads: 3
+  download_dir: ./downloads
+  sources:
+    - name: Deezer
+      enabled: true
+    - name: Bandcamp
+      enabled: true
+    - name: Archive.org
+      enabled: true
+
+playback:
+  shuffle: false
+  repeat: off  # off, one, all
+  autoplay: true
+  crossfade: false
+
+dsl:
+  feature_scripts_dir: config/feature_scripts
+  auto_load: true

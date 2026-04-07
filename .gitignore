@@ -1,0 +1,65 @@
+# AudioStream .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.sublime-project
+*.sublime-workspace
+
+# Project specific
+logs/
+uploads/
+downloads/
+music/
+*.db
+.DS_Store
+*.pyc
+
+# Temporary files
+*.tmp
+*.temp
+*~
+.#*
+
+# Audio files (optional - comment out if you want to version control)
+*.wav
+*.flac
+*.mp3
+*.m4a
+*.ogg
+*.aiff
+*.alac
+
+# Large files
+*.iso
+*.zip
+*.tar.gz
+*.rar

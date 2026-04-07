@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AudioStream - High-Definition Audio Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎵 AudioStream</h1>
+            <p>High-Definition Lossless Audio Player</p>
+        </header>
+
+        <main>
+            <!-- Now Playing Section -->
+            <section class="now-playing">
+                <div class="album-art">
+                    <img id="albumArt" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect fill='%23333' width='200' height='200'/%3E%3Ccircle cx='100' cy='100' r='40' fill='%23666'/%3E%3Ccircle cx='100' cy='100' r='30' fill='%23333'/%3E%3C/svg%3E" alt="Album Art">
+                </div>
+                <div class="track-info">
+                    <h2 id="trackTitle">No Track Loaded</h2>
+                    <p id="trackArtist">Unknown Artist</p>
+                    <p id="trackAlbum">Unknown Album</p>
+                    <p id="trackFormat" class="format-info">-</p>
+                </div>
+            </section>
+
+            <!-- Playback Controls -->
+            <section class="playback-controls">
+                <div class="progress-container">
+                    <span id="currentTime">0:00</span>
+                    <input type="range" id="progressBar" min="0" max="100" value="0" class="progress-bar">
+                    <span id="duration">0:00</span>
+                </div>
+                <div class="button-group">
+                    <button id="previousBtn" class="btn btn-control">⏮ Previous</button>
+                    <button id="playBtn" class="btn btn-primary">▶ Play</button>
+                    <button id="pauseBtn" class="btn btn-control">⏸ Pause</button>
+                    <button id="nextBtn" class="btn btn-control">⏭ Next</button>
+                    <button id="stopBtn" class="btn btn-control">⏹ Stop</button>
+                </div>
+            </section>
+
+            <!-- Volume and Settings -->
+            <section class="volume-settings">
+                <div class="control-group">
+                    <label for="volumeSlider">Volume:</label>
+                    <input type="range" id="volumeSlider" min="0" max="100" value="80" class="slider">
+                    <span id="volumeValue">80%</span>
+                </div>
+                <div class="control-group">
+                    <label for="outputSelect">Output:</label>
+                    <select id="outputSelect" class="control">
+                        <option value="0">HDMI Output</option>
+                        <option value="1">Analog Output</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- File Upload -->
+            <section class="file-upload">
+                <h3>Upload Music</h3>
+                <div class="upload-area" id="uploadArea">
+                    <p>Drag files here or click to select</p>
+                    <input type="file" id="fileInput" multiple accept=".flac,.wav,.ogg,.mp3,.m4a">
+                </div>
+                <div id="uploadStatus" class="upload-status"></div>
+            </section>
+
+            <!-- Library -->
+            <section class="library">
+                <h3>Music Library</h3>
+                <div class="library-controls">
+                    <input type="text" id="searchInput" placeholder="Search music..." class="search-box">
+                    <button id="scanBtn" class="btn btn-secondary">Scan Library</button>
+                </div>
+                <div id="libraryList" class="library-list">
+                    <p id="libraryEmpty">No tracks loaded</p>
+                </div>
+            </section>
+
+            <!-- Playlists -->
+            <section class="playlists">
+                <h3>Playlist</h3>
+                <div id="playlistContainer" class="playlist-container">
+                    <p id="playlistEmpty">Playlist is empty</p>
+                </div>
+            </section>
+
+            <!-- Device Info -->
+            <section class="device-info">
+                <h3>Device Information</h3>
+                <div id="deviceInfo" class="info-grid">
+                    <p><strong>Version:</strong> <span id="version">1.0.0</span></p>
+                    <p><strong>Platform:</strong> <span id="platform">Linux</span></p>
+                    <p><strong>Uptime:</strong> <span id="uptime">0h 0m</span></p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 AudioStream | High-Definition Audio Player</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
